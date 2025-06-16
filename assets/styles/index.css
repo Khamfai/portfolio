@@ -8,11 +8,13 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(11, 10, 16);
-    background: linear-gradient(84deg, rgba(14, 15, 25, 1) 0%, rgb(2, 26, 13) 100%);
+body,
+html {
+    height: 100%;
     color: white;
     line-height: 1.6;
+    background-color: rgb(11, 10, 16);
+    background: linear-gradient(84deg, rgba(14, 15, 25, 1) 0%, rgb(2, 26, 13) 100%);
 }
 
 .header {
@@ -59,7 +61,6 @@ p {
     color: #edecec;
 }
 
-
 .work {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
@@ -70,18 +71,56 @@ hr {
     margin: 2px 0px;
 }
 
-.content {
-    height: 60svh;
-    padding-top: 4rem;
+.hero {
+    height: 90svh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     align-content: center;
-}
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 
-.myname {
-    white-space: nowrap;
-    overflow: hidden;
-    color: rgb(0, 227, 239);
-    border-right: 1px solid;
-    animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+    .profile {
+        text-align: left;
+        padding-bottom: 6rem;
+        display: flex;
+
+        .me {
+            flex: 2;
+            margin: 0rem 6rem;
+
+            .myname {
+                white-space: nowrap;
+                overflow: hidden;
+                color: rgb(0, 227, 239);
+                border-right: 1px solid;
+                animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+            }
+
+            .platform {
+                margin-top: 2rem;
+                display: flex;
+                text-align: center;
+                .stack {
+                    margin: 10px;
+                    padding: 10px;
+                    filter: drop-shadow(0rem 0rem 0.5rem rgb(4, 137, 100));
+                }
+            }
+        }
+
+        .my-profile {
+            flex: 1;
+
+            img {
+                height: 250px;
+                border-radius: 50%;
+                border-color: rgb(12, 122, 63);
+                box-shadow: 0px 0px 100px rgb(1, 166, 75, 1);
+            }
+        }
+    }
 }
 
 .my-skill>ol>li {
@@ -124,29 +163,6 @@ hr {
     50% {
         border-color: transparent;
     }
-}
-
-.profile {
-    text-align: center;
-    padding-bottom: 6rem;
-
-    .my-profile {
-        height: 200px;
-        border-radius: 50%;
-        border-color: rgb(12, 122, 63);
-        box-shadow: 0px 0px 100px rgb(1, 166, 75, 1);
-
-    }
-}
-
-.stack {
-    position: absolute;
-    filter: drop-shadow(0rem 0rem 0.5rem rgb(4, 137, 100));
-}
-
-.platform {
-    top: 10rem;
-    left: 48%;
 }
 
 .nuxtjs {
@@ -242,6 +258,22 @@ hr {
     }
 }
 
+.project {
+    .list {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(4, auto);
+        margin-top: 1rem;
+
+        .ach {
+            padding: 10px;
+            border-radius: 6px;
+            background-color: rgba(59, 60, 60, 0.5);
+            max-width: 320px;
+        }
+    }
+}
+
 span.mdi {
     height: 40px;
     width: 40px;
@@ -268,11 +300,6 @@ span.mdi {
     }
 }
 
-.project{
-    .list{
-        display: grid;
-    }
-}
 
 .icon-lg {
     font-size: 48px;
