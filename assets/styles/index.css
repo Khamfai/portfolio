@@ -267,9 +267,9 @@ hr {
 
         .ach {
             padding: 10px;
+            max-width: 320px;
             border-radius: 6px;
             background-color: rgba(59, 60, 60, 0.5);
-            max-width: 320px;
         }
     }
 }
@@ -281,16 +281,16 @@ span.mdi {
 
 .footer {
     height: 10svh;
+    display: grid;
+    grid-gap: 20px;
     justify-content: center;
     align-items: center;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 20px;
+    grid-template-columns: auto auto auto auto auto;
     background-color: rgba(59, 60, 60, 0.5);
 
     a {
-        margin: 0 2rem;
         color: white;
+        margin: 0 2rem;
         text-decoration: none;
         transition: color 0.3s;
     }
