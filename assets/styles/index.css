@@ -112,7 +112,9 @@ hr {
 
         .my-profile {
             flex: 1;
-
+            align-items: center;
+            align-content: center;
+            justify-items: center;
             img {
                 height: 250px;
                 border-radius: 50%;
@@ -163,31 +165,6 @@ hr {
     50% {
         border-color: transparent;
     }
-}
-
-.nuxtjs {
-    top: 26rem;
-    left: 36%;
-}
-
-.nestjs {
-    top: 16rem;
-    left: 60%;
-}
-
-.prisma {
-    top: 31rem;
-    left: 48%;
-}
-
-.sequelize {
-    top: 16rem;
-    left: 35%;
-}
-
-.mysql {
-    top: 26rem;
-    left: 60%;
 }
 
 .polygon-img {
@@ -280,7 +257,7 @@ span.mdi {
 }
 
 .footer {
-    height: 10svh;
+    height: 20svh;
     display: grid;
     grid-gap: 20px;
     justify-content: center;
@@ -300,7 +277,6 @@ span.mdi {
     }
 }
 
-
 .icon-lg {
     font-size: 48px;
 }
@@ -311,4 +287,8 @@ span.mdi {
 
 .icon-sm {
     font-size: 16px;
+}
+
+@media screen {
+    
 }
