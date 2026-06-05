@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(which gh; echo \"---REMOTES---\"; git remote -v; echo \"---BREW gh---\"; ls /opt/homebrew/bin/gh /usr/local/bin/gh 2>/dev/null)",
+      "Read(//opt/homebrew/bin/**)"
+    ]
+  }
+}

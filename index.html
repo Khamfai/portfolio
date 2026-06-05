@@ -1,232 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khamfai</title>
-    <link rel="stylesheet" href="assets/styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khamfai Sialimoua — Back-End & IoT Developer</title>
+<link rel="stylesheet" href="assets/styles/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
-
 <body>
-    <header class="header">
-        <nav style="display: flex; align-items: center;">
-            <div style="flex: 1; display: flex;  align-items: center; ">
-                <img src="assets/images/logo.svg" style="width: 35px;;" alt="">
-                <div style="margin-left: 10px; color: rgb(0, 227, 239);font-size: 25px;"> I'm Khamfai</div>
-            </div>
-            <ul class="menu">
-                <li><a href="#her0">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contect">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-        <div id="hero" class="hero">
-            <div class="profile">
-                <div class="me">
-                    <div style="display: flex;  font-size: xx-large;">
-                        <span style="padding-right: 8px; width: max-content">Hello, I am </span>
-                        <div style="width: fit-content;">
-                            <div class="myname">Khampfai Sialimoua</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="work">I'm a Back-End Developer (TypeScript/JavaScript)</div>
-                    <div style="font-size: xx-large;">Back-end by day, Gamer by night, Traveler on Weekends</div>
-                    <div class="work">You and Me, We are Mini Bugs on Our Produects ( • ᴗ - ) ✧</div>
 
-                    <div class="platform">
-                        <div class="stack nodejs">
-                            <img class="polygon-img" src="https://www.mindrops.com/images/nodejs-image.webp" alt="">
-                            <div>NodeJS</div>
-                        </div>
-                        <div class="stack nestjs">
-                            <img class="polygon-img" src="https://kinsta.com/wp-content/uploads/2022/06/nest-js-logo.png" alt="">
-                            <div>NestJS</div>
-                        </div>
-                        <div class="stack nuxtjs">
-                            <img class="polygon-img"
-                                src="https://media.licdn.com/dms/image/v2/C4D12AQFJ0PEjyD4aoQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1534147870117?e=2147483647&v=beta&t=azLEv03eUS_Zi2qyXOfytZedC2ltoYL8xqsjCz7fwjA"
-                                alt="">
-                            <div>VueJS</div>
-                        </div>
-                        <div class="stack nuxtjs">
-                            <img class="polygon-img" src="https://cdn.brandfetch.io/idbZEWAZ5J/w/100/h/100/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="">
-                            <div>NuxtJS</div>
-                        </div>
-                        <div class="stack prisma">
-                            <img class="polygon-img" src="https://miro.medium.com/v2/resize:fit:866/0*VRlI0n8V_zvnoKpB.jpg" alt="">
-                            <div>Prisma</div>
-                        </div>
-                        <div class="stack sequelize">
-                            <img class="polygon-img" style="object-fit: cover;" src="https://google.github.io/sqlcommenter/images/sequelize-logo.png" alt="">
-                            <div>Sequalize</div>
-                        </div>
-                        <div class="stack mysql">
-                            <img class="polygon-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9dbZ2i5WyUNd6GRS_AE5d_R7TQh9GqiaciA2hbOsTZF3vKFIbogpmwC_nmjs-eE4cfPQ&usqp=CAU" alt="">
-                            <div>MySQL</div>
-                        </div>
-                        <div class="stack ">
-                            <img class="polygon-img" style="object-fit: cover;" src="https://abopen.com/app/uploads/2019/06/platformio.jpg" alt="">
-                            <div>PlatformIO</div>
-                        </div>
-                        <div class="stack ">
-                            <img class="polygon-img" style="object-fit: cover;" src="https://images.ctfassets.net/23aumh6u8s0i/4TsG2mTRrLFhlQ9G1m19sC/4c9f98d56165a0bdd71cbe7b9c2e2484/flutter" alt="">
-                            <div>Flutter</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="my-profile">
-                    <img src="https://avatars.githubusercontent.com/u/61783889?v=4" alt="">
-                </div>
-            </div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo"><img src="assets/images/logo.svg" alt=""> Khamfai</a>
+  <ul class="nav-links">
+    <li><a href="#about">about</a></li>
+    <li><a href="#stack">stack</a></li>
+    <li><a href="#tools">tools</a></li>
+    <li><a href="#projects">projects</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">get in touch ↗</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <p class="hero-eyebrow reveal">Back-End · IoT Developer — Available for work</p>
+  <h1 class="hero-name reveal reveal-delay-1">
+    <div>I build</div>
+    <div class="line2">back-end</div>
+    <div class="line2">&amp; IoT<span class="accent">_</span></div>
+  </h1>
+  <p class="hero-subtitle reveal reveal-delay-2">
+    I build REST APIs, microservices, and connected devices with TypeScript, ElysiaJS, and Python — from database to hardware. 
+    Back-end by day, gamer by night, traveler on weekends.
+  </p>
+  <div class="hero-actions reveal reveal-delay-3">
+    <a href="#projects" class="btn-primary"><i class="fa-solid fa-arrow-down"></i> View work</a>
+    <a href="#contact" class="btn-ghost">Let's talk →</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">4<span>+</span></div>
+      <div class="stat-label">Years exp.</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4<span>+</span></div>
+      <div class="stat-label">Projects done</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2<span></span></div>
+      <div class="stat-label">Apps shipped</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <i class="fa-solid fa-chevron-down"></i> scroll to explore
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-left">
+    <div class="section-header">
+      <p class="sec-label">Who I am</p>
+      <h2 class="sec-title">Developer &amp;<br><em>problem solver</em></h2>
+    </div>
+    <div class="about-text reveal">
+      <p>Hi! I'm <strong>Khamfai Sialimoua</strong> — a back-end developer and IoT enthusiast who loves solving real-world problems through code and connected hardware.</p>
+      <p>I specialize in <strong>JavaScript / TypeScript</strong> and frameworks like Elysia, Express, and NestJS, with databases such as MySQL and Couchbase and ORMs like Prisma and Sequelize. On the IoT side I work with <strong>C++ and Python</strong> to build embedded, connected systems.</p>
+      <p>I've collaborated with the <strong>Institut de Recherche pour le Développement (IRD)</strong> on soil-science and water-monitoring devices. Outside of work, I recharge by traveling and gaming.</p>
+    </div>
+  </div>
+
+  <div class="about-visual reveal">
+    <div class="about-card">
+      <div class="about-avatar">KS</div>
+      <p class="about-card-name">Khamfai Sialimoua</p>
+      <p class="about-card-role">// back-end &amp; IoT developer</p>
+      <div class="about-info-row">
+        <span class="label">LOCATION</span>
+        <span class="value">Vientiane, Laos 🇱🇦</span>
+      </div>
+      <div class="about-info-row">
+        <span class="label">EXPERIENCE</span>
+        <span class="value">4+ years</span>
+      </div>
+      <div class="about-info-row">
+        <span class="label">STATUS</span>
+        <span class="value" style="color:var(--lime);">● Available</span>
+      </div>
+      <div class="about-info-row">
+        <span class="label">FOCUS</span>
+        <span class="value">API · IoT · Data</span>
+      </div>
+      <div class="about-info-row">
+        <span class="label">LANGUAGES</span>
+        <span class="value">LO · EN</span>
+      </div>
+      <div class="about-deco"></div>
+      <div class="about-deco2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STACK ===== -->
+<section id="stack">
+  <div class="section-header reveal">
+    <p class="sec-label">Tech Stack</p>
+    <h2 class="sec-title">Technologies I<br><em>work with</em></h2>
+  </div>
+  <div class="stack-grid">
+
+    <div class="stack-category reveal">
+      <div class="stack-cat-icon" style="background:rgba(184,255,87,0.08);">⚙️</div>
+      <p class="stack-cat-title">Back-End</p>
+      <div class="stack-items">
+        <div class="stack-item">
+          <span class="stack-item-name">JavaScript</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:92%;background:var(--lime);"></div></div>
         </div>
+        <div class="stack-item">
+          <span class="stack-item-name">TypeScript</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:90%;background:var(--lime);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Node.js / Express</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:86%;background:var(--lime);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Elysia / NestJS</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:80%;background:var(--lime);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Java</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:68%;background:rgba(184,255,87,0.4);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Prisma / Sequelize</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:82%;background:var(--lime);"></div></div>
+        </div>
+      </div>
+    </div>
 
-        <section class="content">
+    <div class="stack-category reveal reveal-delay-1">
+      <div class="stack-cat-icon" style="background:rgba(157,112,255,0.08);">🖥️</div>
+      <p class="stack-cat-title">Front-End</p>
+      <div class="stack-items">
+        <div class="stack-item">
+          <span class="stack-item-name">HTML / CSS</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:80%;background:var(--violet);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Vue.js</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:72%;background:var(--violet);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Nuxt.js</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:70%;background:var(--violet);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Quasar / Framework7</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:64%;background:rgba(157,112,255,0.4);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Flutter</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:66%;background:rgba(157,112,255,0.4);"></div></div>
+        </div>
+      </div>
+    </div>
 
-        </section>
+    <div class="stack-category reveal reveal-delay-2">
+      <div class="stack-cat-icon" style="background:rgba(87,229,255,0.08);">🔌</div>
+      <p class="stack-cat-title">IoT &amp; Embedded</p>
+      <div class="stack-items">
+        <div class="stack-item">
+          <span class="stack-item-name">Python</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:78%;background:var(--cyan);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">C / C++</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:72%;background:var(--cyan);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Arduino</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:74%;background:var(--cyan);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">PlatformIO</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:70%;background:var(--cyan);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">MQTT</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:72%;background:var(--cyan);"></div></div>
+        </div>
+        <div class="stack-item">
+          <span class="stack-item-name">Sensors / Microcontrollers</span>
+          <div class="stack-bar-wrap"><div class="stack-bar" style="width:68%;background:rgba(87,229,255,0.4);"></div></div>
+        </div>
+      </div>
+    </div>
 
-        <section id="about" class="about">
-            <h2>About Me & Stack</h2>
-            <hr>
-            <p>&emsp;I’m a back-end developer and IoT enthusiast with a passion for solving real-world problems through code and innovation. I specialize in JavaScript, TypeScript, and frameworks like NestJS, along with databases such as
-                MySQL, Prisma,
-                Sequelize, and Couchbase. On the IoT side, I work with C++ and Python to build embedded and connected systems.</p>
+  </div>
+</section>
 
-            <p> &emsp;I also have basic front-end experience using HTML, Vue.js, Nuxt.js, Framework7, and Quasar.js, which helps me understand the full development stack from device to UI.</p>
+<!-- ===== TOOLS ===== -->
+<section id="tools">
+  <div class="section-header reveal">
+    <p class="sec-label">Toolbox</p>
+    <h2 class="sec-title">Tools of my<br><em>craft</em></h2>
+  </div>
+  <div class="tools-layout">
+    <div>
+      <p class="tools-side-title"><span>Dev</span> tools</p>
+      <div class="tools-orbit">
+        <div class="tool-pill reveal"><i class="devicon-github-original"></i>Git / GitHub</div>
+        <div class="tool-pill reveal reveal-delay-1"><i class="devicon-gitlab-plain colored"></i>GitLab</div>
+        <div class="tool-pill reveal reveal-delay-2"><i class="devicon-vscode-plain colored"></i>VS Code</div>
+        <div class="tool-pill reveal"><span class="tool-dot" style="background:#ff7f00;"></span>PlatformIO</div>
+        <div class="tool-pill reveal reveal-delay-1"><i class="devicon-postman-plain colored"></i>Postman</div>
+        <div class="tool-pill reveal reveal-delay-2"><i class="devicon-docker-plain colored"></i>Docker</div>
+        <div class="tool-pill reveal"><i class="devicon-npm-original-wordmark colored"></i>npm</div>
+      </div>
+    </div>
+    <div>
+      <p class="tools-side-title"><span>Data</span> &amp; platforms</p>
+      <div class="tools-orbit">
+        <div class="tool-pill reveal"><i class="devicon-mysql-original colored"></i>MySQL</div>
+        <div class="tool-pill reveal reveal-delay-1"><i class="devicon-couchbase-plain colored"></i>Couchbase</div>
+        <div class="tool-pill reveal reveal-delay-2"><i class="devicon-redis-plain colored"></i>Redis</div>
+        <div class="tool-pill reveal"><i class="devicon-prisma-original"></i>Prisma</div>
+        <div class="tool-pill reveal"><i class="devicon-sequelize-plain colored"></i>Sequelize</div>
+        <div class="tool-pill reveal reveal-delay-1"><i class="devicon-linux-plain"></i>Linux</div>
+        <div class="tool-pill reveal reveal-delay-2"><i class="devicon-nginx-original colored"></i>Nginx</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <p>&emsp;I enjoy working on projects that challenge me to learn new skills and explore new technologies. Some of the projects I’ve worked on include Moomou, MuMuPlug, IPoS, and CoopSoil—an IoT research tool for monitoring soil
-                conditions.</p>
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="section-header reveal">
+    <p class="sec-label">Work</p>
+    <h2 class="sec-title">Selected<br><em>projects</em></h2>
+  </div>
+  <div class="projects-grid">
 
-            <p>&emsp;Outside of work, I love traveling and playing games to relax and recharge.</p>
+    <!-- FEATURED -->
+    <div class="project-card featured proj-lime reveal">
+      <div class="project-thumb">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2b/77/ca/2b77cabe-9aca-27ad-5488-7fbdcbe2575c/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg" alt="Moomou app icon" style="width:120px;height:120px;border-radius:26px;box-shadow:0 8px 32px rgba(0,0,0,0.45);">
+      </div>
+      <div class="project-body">
+        <span class="project-badge">Featured · Mobile App</span>
+        <h3 class="project-title"><em>Moomou</em> — Mobile App</h3>
+        <p class="project-desc">A published mobile app (Quasar + Vue) on both Google Play and the App Store, backed by an Elysia REST API with real-time Socket.IO.</p>
+        <div class="project-tags">
+          <span class="p-tag">Quasar</span>
+          <span class="p-tag">Vue</span>
+          <span class="p-tag">Elysia</span>
+          <span class="p-tag">REST API</span>
+          <span class="p-tag">Socket.IO</span>
+        </div>
+        <div class="project-links">
+          <a href="https://play.google.com/store/apps/details?id=com.mounoydev.moomou&hl=en" target="_blank" rel="noopener" class="proj-link primary"><i class="fa-brands fa-google-play"></i> Play Store</a>
+          <a href="https://apps.apple.com/us/app/moomou/id6746440548" target="_blank" rel="noopener" class="proj-link"><i class="fa-brands fa-app-store-ios"></i> App Store</a>
+        </div>
+      </div>
+    </div>
 
-            <div class="my-skill" style="margin-top: 1rem;">
-                <div class="work">Back-End Developer (Intermediate)</div>
-                <ol class="alternating-colors" style="padding: 0 40px;">
-                    <li>
-                        <h4>JavaScript and TypeScript</h4>
-                    </li>
-                    <li>
-                        <h4>Object Relationship Model (ORM)</h4>
-                    </li>
-                    <li>
-                        <h4>Database (MySQL and Couchbase)</h4>
-                    </li>
-                </ol>
+    <div class="project-card proj-violet reveal">
+      <div class="project-thumb">
+        <span style="font-size:56px;filter:drop-shadow(0 0 20px rgba(157,112,255,0.4));">🎮</span>
+      </div>
+      <div class="project-body">
+        <span class="project-badge">Web App</span>
+        <h3 class="project-title"><em>Game</em> Topup Service</h3>
+        <p class="project-desc">A web app for game top-up services — a Quasar + Vue front-end over an Express REST API with MySQL.</p>
+        <div class="project-tags">
+          <span class="p-tag">Quasar</span>
+          <span class="p-tag">Vue</span>
+          <span class="p-tag">Express</span>
+          <span class="p-tag">REST API</span>
+          <span class="p-tag">MySQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://game-service-app.moomou.com/#/services" target="_blank" rel="noopener" class="proj-link primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> View web app</a>
+        </div>
+      </div>
+    </div>
 
-            </div>
+    <div class="project-card proj-cyan reveal reveal-delay-1">
+      <div class="project-thumb">
+        <span style="font-size:56px;filter:drop-shadow(0 0 20px rgba(87,229,255,0.4));">🌱</span>
+      </div>
+      <div class="project-body">
+        <span class="project-badge">IRD Programme · IoT</span>
+        <h3 class="project-title"><em>CoopSoil</em> Device</h3>
+        <p class="project-desc">Joined an IRD research programme to co-design innovative tools for soil science.</p>
+        <div class="project-tags">
+          <span class="p-tag">Python</span>
+          <span class="p-tag">HTML / CSS</span>
+          <span class="p-tag">IoT</span>
+          <span class="p-tag">Sensors</span>
+          <span class="p-tag">Debian OS</span>
+          <span class="p-tag">Raspberry Pi</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.ird.fr/un-programme-structurant-de-formation-pour-co-concevoir-des-outils-innovants-en-sciences-du-sol" target="_blank" rel="noopener" class="proj-link primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read more</a>
+        </div>
+      </div>
+    </div>
 
-            <div class="my-skill" style="margin-top: 1rem;">
-                <div class="work">Font-End Developer (Basic)</div>
-                <ol class="alternating-colors" style="padding: 0 40px;">
-                    <li>
-                        <h4>HTNL</h4>
-                    </li>
-                    <li>
-                        <h4>VueJS</h4>
-                    </li>
-                    <li>
-                        <h4>QausarJS</h4>
-                    </li>
-                    <li>
-                        <h4>NuxtJS</h4>
-                    </li>
-                    <li>
-                        <h4>Framework7</h4>
-                    </li>
-                    <li>
-                        <h4>Flutter</h4>
-                    </li>
-                </ol>
-            </div>
+    <div class="project-card proj-pink reveal reveal-delay-2">
+      <div class="project-thumb">
+        <span style="font-size:56px;filter:drop-shadow(0 0 20px rgba(255,87,180,0.4));">💧</span>
+      </div>
+      <div class="project-body">
+        <span class="project-badge">IRD Training · IoT</span>
+        <h3 class="project-title"><em>Water-Level</em> Monitoring</h3>
+        <p class="project-desc">Built the device and joined IRD training on a new self-contained water-level monitoring technology.</p>
+        <div class="project-tags">
+          <span class="p-tag">IoT</span>
+          <span class="p-tag">C++</span>
+          <span class="p-tag">Sensors</span>
+        </div>
+        <div class="project-links">
+          <a href="https://en.ird.fr/training-use-new-self-contained-technology-water-level-monitoring" target="_blank" rel="noopener" class="proj-link primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read more</a>
+        </div>
+      </div>
+    </div>
 
-            <div class="my-skill" style="margin-top: 1rem;">
-                <div class="work">Internet Of Thing (IoT)</div>
-                <ol class="alternating-colors" style="padding: 0 40px;">
-                    <li>
-                        <h4>C and C++</h4>
-                    </li>
-                    <li>
-                        <h4>Python</h4>
-                    </li>
-                </ol>
-            </div>
+  </div>
+</section>
 
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-text reveal">
+    <div class="section-header">
+      <p class="sec-label">Let's connect</p>
+      <h2 class="sec-title">Got a project<br>in <em>mind?</em></h2>
+    </div>
+    <p>Open to freelance, full-time roles, and interesting collaborations — feel free to reach out.</p>
+    <div class="social-links">
+      <a href="https://github.com/Khamfai" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://gitlab.com/Khamphay" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-gitlab"></i> GitLab</a>
+      <a href="https://www.linkedin.com/in/kp-4dev218/" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.facebook.com/phai.muas/" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="mailto:txammuas1@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i> Email</a>
+    </div>
+  </div>
 
-            <div class="about-tab">
-                <div class="work">Work Hostory and Experience</div>
-                <div class="work-history">
-                    <div class="stepper">
-                        <div class="step completed">
-                            <div class="v-stepper">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                            </div>
-                            <div class="step-content">
-                                <h4>Mounoy Development Sole Co.,Ltd</h4>
-                                <div class="subtitle">Venetian, Jan 2023 - Present (Back-End, App, Web App and IoT)</div>
-                                <p class="detail">&emsp; Develop Restful API, Microservice, optimize database queries, data exchange between the microservice and scaleable for the cluster. Designed and developed a web-based admin panel to manage
-                                    data. Develop new applications and enhance existing ones by improving functionality, performance, and user requirements. Collaborated with Institut de Recherche pour le Développement (IRD) to develop soil analysis
-                                    devices using Python.</p>
-                            </div>
-                        </div>
-                        <div class="step completed">
-                            <div class="v-stepper">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                            </div>
-                            <div class="step-content">
-                                <h4>JLS IT Sulotion</h4>
-                                <div class="subtitle">Venetian, Oct 2021 - Nov 2022 (Back-End and Mobile App Developer)</div>
-                                <p class="detail">&emsp;Proficient in developing and deploying REST APIs using NodeJS, Sequelize (ORM), and MySQL. Design and develop a mobile application forrestaurants using Flutter Framework.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <form class="contact-form reveal reveal-delay-1" id="contactForm">
+    <div class="form-group">
+      <label>Your name</label>
+      <input type="text" id="cf-name" placeholder="e.g. John Doe" required>
+    </div>
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" id="cf-email" placeholder="your@email.com" required>
+    </div>
+    <div class="form-group">
+      <label>Project idea</label>
+      <textarea id="cf-msg" placeholder="Tell me about your project..." required></textarea>
+    </div>
+    <button type="submit" class="form-submit">
+      <i class="fa-solid fa-paper-plane"></i> Send message
+    </button>
+  </form>
+</section>
 
-        <section id="project" class="project">
-            <h2>Recent Projects and Achievements</h2>
-            <hr />
-            <div class="list">
-                <div class="ach">
-                    <img src="" alt="">
-                    <div>Moomou App</div>
-                </div>
-                <div class="ach">MuMuPlug</div>
-                <div class="ach">Coop Soil</div>
-                <div class="ach">IPoS</div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <a href="mailto:txammuas1@gmail.com" style="justify-items: center;">
-            <span class="mdi mdi-email icon-md"></span>
-            <div style="font-size: 12px;">G-Mail</div>
-        </a>
-        <a href="https://github.com/Khamfai" style="justify-items: center;">
-            <span class="mdi mdi-github icon-md"></span>
-            <div style="font-size: 12px;">GitHub</div>
-        </a>
-        <a href="https://gitlab.com/Khamphay" style="justify-items: center;">
-            <span class="mdi mdi-gitlab icon-md"></span>
-            <div style="font-size: 12px;">GitLab</div>
-        </a>
-        <a href="https://www.linkedin.com/in/kp-4dev218/" style="justify-items: center;">
-            <span class="mdi mdi-linkedin icon-md"></span>
-            <div style="font-size: 12px;">LinkIn</div>
-        </a>
-        <a href="https://www.facebook.com/phai.muas/" style="justify-items: center;">
-            <span class="mdi mdi-facebook icon-md"></span>
-            <div style="font-size: 12px;">Facebook</div>
-        </a>
-    </footer>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">Kham<span>fai</span></div>
+  <p class="footer-copy">© 2026 · Khamfai Sialimoua · Built in Laos</p>
+</footer>
+
+<script>
+// CURSOR
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx + 'px';
+  cursor.style.top = my + 'px';
+});
+function animRing() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  ring.style.left = rx + 'px';
+  ring.style.top = ry + 'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
+
+// NAVBAR SCROLL
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// REVEAL ON SCROLL
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+reveals.forEach(el => io.observe(el));
+
+// HERO INSTANT REVEAL
+setTimeout(() => {
+  document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
+}, 100);
+
+// CONTACT FORM → opens the visitor's mail client (static site, no backend)
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('cf-name').value;
+  const email = document.getElementById('cf-email').value;
+  const msg = document.getElementById('cf-msg').value;
+  const subject = encodeURIComponent('Portfolio contact from ' + name);
+  const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+  window.location.href = 'mailto:txammuas1@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
 </body>
-
 </html>
