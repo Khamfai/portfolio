@@ -674,7 +674,11 @@ footer {
   .project-card.featured { flex-direction: column; }
   .project-card.featured .project-thumb { width: 100%; min-height: 200px; }
   .tools-layout { grid-template-columns: 1fr; gap: 40px; }
-  .hero-stats { display: none; }
+  .hero-stats {
+    position: static;
+    margin-top: 40px;
+    width: 100%;
+  }
   .nav-links { display: none; }
   .tool-pill, .form-submit { cursor: pointer; }
 }
