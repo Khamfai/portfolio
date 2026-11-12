@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'Righteous';
-  src: url('/assets/fonts/Righteous.ttf') format('truetype');
-  font-display: swap;
-}
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -19,10 +13,9 @@
   --violet: #9d70ff;
   --cyan: #57e5ff;
 
-  /* Fonts kept from the project — Righteous for display, system for body.
-     The template's Syne / Fira Code / Instrument Sans are intentionally NOT imported. */
-  --font-display: 'Righteous', cursive;
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Roboto everywhere (loaded from Google Fonts in index.html). */
+  --font-display: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --syne: var(--font-display);
   --code: var(--font-body);
   --body: var(--font-body);
@@ -99,9 +92,9 @@ nav.scrolled {
   font-weight: 800;
   color: var(--text);
   text-decoration: none;
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; gap: 10px;
 }
-.nav-logo img { width: 26px; height: 26px; }
+.nav-logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px rgba(184,255,87,0.5); }
 .nav-logo span {
   color: var(--lime);
   font-size: 22px;
@@ -483,6 +476,7 @@ section { padding: 120px 5%; max-width: 1200px; margin: 0 auto; }
   margin-bottom: 10px;
   line-height: 1.2;
 }
+.project-title em { font-style: normal; }
 .project-desc {
   font-size: 13px;
   color: var(--muted);
@@ -517,20 +511,8 @@ section { padding: 120px 5%; max-width: 1200px; margin: 0 auto; }
 .proj-lime .project-title em { color: var(--lime); }
 .proj-lime .proj-link.primary { color: var(--lime); }
 
-.proj-violet .project-thumb { background: linear-gradient(135deg, #100a1f 0%, #1e0f38 100%); }
-.proj-violet .project-badge { background: rgba(157,112,255,0.1); color: var(--violet); }
-.proj-violet .project-title em { color: var(--violet); }
-.proj-violet .proj-link.primary { color: var(--violet); }
 
-.proj-cyan .project-thumb { background: linear-gradient(135deg, #001a1f 0%, #002a30 100%); }
-.proj-cyan .project-badge { background: rgba(87,229,255,0.1); color: var(--cyan); }
-.proj-cyan .project-title em { color: var(--cyan); }
-.proj-cyan .proj-link.primary { color: var(--cyan); }
 
-.proj-pink .project-thumb { background: linear-gradient(135deg, #1f0010 0%, #380020 100%); }
-.proj-pink .project-badge { background: rgba(255,87,180,0.1); color: #ff57b4; }
-.proj-pink .project-title em { color: #ff57b4; }
-.proj-pink .proj-link.primary { color: #ff57b4; }
 
 /* ============ CONTACT ============ */
 #contact {
