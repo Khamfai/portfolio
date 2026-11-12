@@ -167,6 +167,18 @@ section { padding: 120px 5%; max-width: 1200px; margin: 0 auto; }
   -webkit-text-stroke: 1px rgba(232,228,240,0.25);
 }
 .hero-name .accent { color: var(--lime); }
+.hero-tagline {
+  /* Sci-fi accent font, used only for the caption. */
+  font-family: 'Nova Flat', var(--font-display);
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: var(--lime);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(184,255,87,0.45);
+  max-width: 600px;
+  margin-bottom: 20px;
+}
 .hero-subtitle {
   font-size: 17px;
   color: var(--muted2);
